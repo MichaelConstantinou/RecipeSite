@@ -1,9 +1,10 @@
 RecipieSite::App.controllers :categories do
-  
-  # get :index, :map => '/foo/bar' do
+
+  get :index, :map => '/' do
   #   session[:foo] = 'bar'
-  #   render 'index'
-  # end
+  @categories = Category.all
+  render 'index'
+  end
 
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do
   #   case content_type
@@ -18,6 +19,6 @@ RecipieSite::App.controllers :categories do
   # get '/example' do
   #   'Hello world!'
   # end
-  
+
 
 end

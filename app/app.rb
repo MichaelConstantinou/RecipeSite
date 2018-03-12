@@ -5,6 +5,8 @@ module RecipieSite
     register Padrino::Helpers
     enable :sessions
 
+    layout  :default
+
     ##
     # Caching support.
     #
