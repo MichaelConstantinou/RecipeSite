@@ -1,9 +1,14 @@
 RecipieSite::App.controllers :categories do
 
   get :index, :map => '/' do
-  #   session[:foo] = 'bar'
-  @categories = Category.all
-  render 'index'
+    @categories = Category.all
+    render 'index'
+  end
+
+  get :index, :with => :category_id do
+    @recipes = Recipe.includes(:categories).where(categories: { id: params[:category_id] })
+    # binding.pry
+    render 'recipes_by_category'
   end
 
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do

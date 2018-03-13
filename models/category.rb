@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
 
-validates :name, presence: true
-has_many :recipes
+  validates :name, presence: true, uniqueness: true
+  has_and_belongs_to_many :recipes
 
 end

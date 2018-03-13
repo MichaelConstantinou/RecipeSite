@@ -1,5 +1,6 @@
 <ul>
 <% @categories.each do |category| %>
-  <li><a href=""><%= category.name %></a></li>
+  <li>
+    <%= link_to category.name, "/categories/#{category.id}"   %></li>
 <% end %>
 </ul>

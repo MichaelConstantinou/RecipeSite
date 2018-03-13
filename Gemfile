@@ -26,6 +26,7 @@ gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 gem 'database_cleaner', :group => 'test'
 gem 'simplecov', require: false, group: :test
+gem 'pry'
 
 
 
