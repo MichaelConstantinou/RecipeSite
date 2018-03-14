@@ -15,7 +15,7 @@ end
 @desserts = Category.create!(name: 'Desserts')
 @mexican = Category.create!(name: 'Mexican')
 
-
+@guest = Chef.create!(name: 'Guest', bio: 'Guest')
 @zoe_tourle = Chef.create!(name: 'Zoe Tourle', bio: 'The most popular person at WGC, Zoe makes a mean burrito and Key Lime Pie.', image: 'zoe_tourle.jpg')
 @master_chief = Chef.create!(name: 'Master Chief', bio: 'After ridding Halo of the alien menace, his dsylexia kicked in and he ended up entering and winning Master Chef 3021.', image: 'master_chief.jpg')
 

@@ -1,10 +1,21 @@
 RecipieSite::App.controllers :recipes do
 
-  #  get :recipe, :map => '/:name' do
-  # # #   session[:foo] = 'bar'
-  #     @recipes = Recipe.all
-  #     render 'recipes'
-  #   end
+  get :new do
+      @new_recipe = Recipe.new
+      render 'new'
+   end
+
+  post :index do
+    p request.params['recipe']
+    @new_recipe = Recipe.new(request.params['recipe'])
+    @user = Chef.find(1)
+    @new_recipe.chef = @user
+    if @new_recipe.save
+      redirect '/chefs/1'
+    else
+      render 'new'
+    end
+  end
 
 
 

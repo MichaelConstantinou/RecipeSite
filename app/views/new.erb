@@ -1,0 +1,8 @@
+<% form_for @new_recipe, '/recipes'  do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+   <%= f.label :desc %>
+  <%= f.text_area :desc %>
+  <%= f.submit "Create" %>
+<% end %>
