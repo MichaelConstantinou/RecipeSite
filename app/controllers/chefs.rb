@@ -1,15 +1,20 @@
-RecipieSite::App.controllers :categories do
+RecipieSite::App.controllers :chefs do
 
-  get :index, :map => '/' do
-    @categories = Category.all
-    render 'index'
+  get :index, :map => '/chefs' do
+    @chefs = Chef.all
+    render 'chefs'
   end
 
-  get :index, :with => :category_id do
-    @recipes = Recipe.includes(:categories).where(categories: { id: params[:category_id] })
+  get :index, :with => :chef_id do
+    @recipes = Recipe.where(chef_id: params[:chef_id])
     # binding.pry
     render 'recipes'
   end
+
+  # get :index, :map => '/foo/bar' do
+  #   session[:foo] = 'bar'
+  #   render 'index'
+  # end
 
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do
   #   case content_type

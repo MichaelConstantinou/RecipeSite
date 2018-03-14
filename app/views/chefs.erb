@@ -1,0 +1,6 @@
+<ul>
+<% @chefs.each do |chef| %>
+  <li><%= link_to chef.name, "/chefs/#{chef.id}" %></li>
+<% end %>
+</ul>
+

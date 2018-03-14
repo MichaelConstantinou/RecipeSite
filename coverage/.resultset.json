@@ -135,7 +135,16 @@
         null,
         null,
         1,
-        4,
+        6,
+        null,
+        null
+      ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/models/chef.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -150,6 +159,7 @@
       "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/models/recipe.rb": [
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -263,6 +273,21 @@
         null,
         null
       ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/app/helpers/chefs_helper.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/app/helpers/recipes_helper.rb": [
         null,
         null,
@@ -293,6 +318,37 @@
         null,
         null
       ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/app/controllers/chefs_controller_spec.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/app/controllers/recipes_controller_spec.rb": [
         1,
         1,
@@ -304,6 +360,21 @@
         null
       ],
       "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/app/helpers/categories_helper_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/app/helpers/chefs_helper_spec.rb": [
         1,
         null,
         1,
@@ -331,6 +402,13 @@
         0,
         null,
         null,
+        null
+      ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/models/chef_spec.rb": [
+        1,
+        null,
+        1,
+        1,
         null
       ],
       "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/spec/models/recipe_spec.rb": [
@@ -398,8 +476,44 @@
         null,
         null,
         null
+      ],
+      "/Users/michaelconstantinou/assignments/recipie_site/recipieSite/app/controllers/chefs.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1520957354
+    "timestamp": 1521023137
   }
 }
