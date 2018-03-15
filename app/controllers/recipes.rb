@@ -11,7 +11,6 @@ RecipieSite::App.controllers :recipes do
   end
 
   post :index do
-    p request.params['recipe']
     @new_recipe = Recipe.new(request.params['recipe'])
     @user = Chef.find(1)
     @new_recipe.chef = @user
@@ -22,7 +21,7 @@ RecipieSite::App.controllers :recipes do
     end
   end
 
- get :index, :with => :category_id do
+  get :index, :with => :category_id do
     @recipes = Recipe.includes(:categories).where(categories: { id: params[:category_id] })
     # binding.pry
     render 'recipes'

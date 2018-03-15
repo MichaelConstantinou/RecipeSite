@@ -9,6 +9,7 @@ categories.each do |category|
   Category.create!(name: category)
 end
 
+
 @recipes = []
 
 @gluten_free = Category.create!(name: 'Gluten Free')
@@ -23,5 +24,19 @@ end
 @recipes << Recipe.create!(name: 'Brownies', desc:'Give ingredients to Zoe and wait 1 hour', categories: [@gluten_free, @desserts], chef: @zoe_tourle)
 @recipes << Recipe.create!(name: 'Chilli', desc:'Add vegtables,mince and chilli, stir and eat', categories: [@mexican], chef: @master_chief)
 @recipes << Recipe.create!(name: 'Chicken Soup', desc: 'Take away tasty stock cubes, boil chicken bones, serve', categories: [@gluten_free], chef: @zoe_tourle)
+
+ingredients = [
+  'carrots',
+  'onion',
+  'basil',
+  'tomatoes',
+  'potatoes'
+]
+
+ingredients.each do |ingredient|
+  Ingredient.create!(name:ingredient)
+end
+
+@recipes[1].recipes_ingredients_usages[quanity: '200g']
 
 
