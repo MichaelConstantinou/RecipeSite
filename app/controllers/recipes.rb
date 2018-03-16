@@ -17,8 +17,8 @@ RecipieSite::App.controllers :recipes do
   post :ingredients, :map => '/recipes/:recipe_id/ingredients' do
     recipe = Recipe.find(params[:recipe_id])
     ingredient = Ingredient.find(params[:ingredient]['id'])
-    # binding.pry
-    redirect '/'
+    recipe.ingredients << ingredient
+    redirect "/recipes/#{recipe.id}"
   end
 
   post :index do
