@@ -5,7 +5,8 @@
 <h3>Ingredients</h3>
 <br>
 <ul><% @recipe.ingredients.each do |ingredient|%>
-    <li><%= ingredient.name %></li>
+    <li><%= ingredient.recipes_ingredients_usages.first.quantity %>
+    <span><%= ingredient.name %></li>
     <% end %>
 </ul>
   <p>Add ingredient to recipe:</p>
