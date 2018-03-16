@@ -6,8 +6,19 @@ RecipieSite::App.controllers :recipes do
    end
 
   get :index, :with => :recipe_id do
+    @ingredient = Ingredient.new
+    @ingredients = Ingredient.all
     @recipe = Recipe.find_by(id: params['recipe_id'])
+    # Recipe.includes(:categories).where(categories: { id: params[:category_id] }
+    # @ingredients = Recipe.find_by(id: params['recipe_id']).ingredients
     render 'display_recipe'
+  end
+
+  post :ingredients, :map => '/recipes/:recipe_id/ingredients' do
+    recipe = Recipe.find(params[:recipe_id])
+    ingredient = Ingredient.find(params[:ingredient]['id'])
+    # binding.pry
+    redirect '/'
   end
 
   post :index do

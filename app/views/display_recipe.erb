@@ -4,13 +4,15 @@
 <br>
 <h3>Ingredients</h3>
 <br>
-  <p>Add ingredient to recipe</p>
-<% @new_ingredient = Ingredient.new %>
-<% form_for @new_ingredient, '/display_recipes'  do |f| %>
-   <%= f.error_messages %>
+<ul><% @recipe.ingredients.each do |ingredient|%>
+    <li><%= ingredient.name %></li>
+    <% end %>
+</ul>
+  <p>Add ingredient to recipe:</p>
+<% form_for @ingredient, url_for(:recipes, :ingredients, recipe_id: @recipe.id)  do |f| %>
    <%= f.label :name %>
-   <%= f.text_field :name %>
-   <%= f.submit "Create" %>
+   <%= f.select(:id, :collection => @ingredients.to_a, :fields => [:name, :id]) %>
+   <%= f.submit "add ingredient" %>
 <% end %>
 
 
