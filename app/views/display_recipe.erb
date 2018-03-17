@@ -9,11 +9,13 @@
     <span><%= ingredient.name %></li>
     <% end %>
 </ul>
-  <p>Add ingredient to recipe:</p>
+  <p>Add ingredient and quantity to recipe:</p>
 <% form_for @ingredient, url_for(:recipes, :ingredients, recipe_id: @recipe.id)  do |f| %>
    <%= f.label :name %>
    <%= f.select(:id, :collection => @ingredients.to_a, :fields => [:name, :id]) %>
-   <%= f.submit "add ingredient" %>
+    <%= f.label :quantity %>
+   <%= f.text_field :quantity %>
+   <%= f.submit "add ingredients" %>
 <% end %>
 
 

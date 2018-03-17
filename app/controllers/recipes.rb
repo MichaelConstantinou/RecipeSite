@@ -18,6 +18,7 @@ RecipieSite::App.controllers :recipes do
     recipe = Recipe.find(params[:recipe_id])
     ingredient = Ingredient.find(params[:ingredient]['id'])
     recipe.ingredients << ingredient
+    recipe.recipes_ingredients_usages.last.update_attribute(:quantity, params[:ingredient]['quantity'])
     redirect "/recipes/#{recipe.id}"
   end
 
