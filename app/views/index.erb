@@ -4,3 +4,13 @@
     <%= link_to category.name, "/categories/#{category.id}"   %></li>
 <% end %>
 </ul>
+<br>
+<p>Search for recipes by ingredient:</p>
+<% form_tag '/categories/ingredient' do %>
+  <%= label_tag :ingredient %>
+  <%= text_field_tag :ingredient %>
+  <%= submit_tag "search" %>
+<% end %>
+<% if @message %>
+  <%= @message %>
+<% end %>

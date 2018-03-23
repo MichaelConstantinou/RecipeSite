@@ -9,8 +9,6 @@ RecipieSite::App.controllers :recipes do
     @ingredient = Ingredient.new
     @ingredients = Ingredient.all
     @recipe = Recipe.find_by(id: params['recipe_id'])
-    # Recipe.includes(:categories).where(categories: { id: params[:category_id] }
-    # @ingredients = Recipe.find_by(id: params['recipe_id']).ingredients
     render 'display_recipe'
   end
 
