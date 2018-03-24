@@ -24,7 +24,6 @@ ingredients = [
   'chocolate',
   'peas',
   'basil',
-  'oregano',
   'coconut milk'
 ]
 
@@ -36,6 +35,8 @@ end
 @bell_pepper = Ingredient.create(name: 'bell pepper')
 @carrot = Ingredient.create(name: 'carrot')
 @tomato = Ingredient.create(name: 'tomato')
+@oregano = Ingredient.create(name: 'oregano')
+@chicken = Ingredient.create(name: 'chicken')
 
 
 # recipes << Recipe.create!(
@@ -48,7 +49,7 @@ end
 #     {ingredient: 'coconut milk', quantity: '1 cup'}
 #   ])
 
-recipes = Recipe.create!(
+recipes << Recipe.create!(
   name: 'Chilli',
   desc:'Add vegtables,mince and chilli, stir and eat',
   categories: [@mexican],
@@ -60,14 +61,15 @@ recipes = Recipe.create!(
     {ingredient: @carrot, quantity: '3'}
 ])
 
-# recipes << Recipe.create!(
-#   name: 'Chicken Soup',
-#   desc: 'Take away tasty stock cubes, boil chicken bones, serve',
-#   categories: [@gluten_free],
-#   chef: @zoe_tourle,
-#   recipes_ingredients_usages_attributes: [
-#     {ingredient: 'tomato', quantity: '5'},
-#     {ingredient: 'oregano', quantity: '1 tbsp'}
-#     ] )
+recipes << Recipe.create!(
+  name: 'Chicken Soup',
+  desc: 'Take away tasty stock cubes, boil chicken bones, serve',
+  categories: [@gluten_free],
+  chef: @zoe_tourle,
+  recipes_ingredients_usages_attributes: [
+    {ingredient: @tomato, quantity: '5'},
+    {ingredient: @oregano, quantity: '1 tbsp'},
+    {ingredient: @chicken, quantity: 'bones'}
+    ] )
 
 

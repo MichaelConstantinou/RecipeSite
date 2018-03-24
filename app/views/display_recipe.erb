@@ -5,7 +5,7 @@
 <h3>Ingredients</h3>
 <br>
 <ul><% @recipe.ingredients.each do |ingredient|%>
-    <li><%= ingredient.recipes_ingredients_usages.first.quantity %>
+    <li><%= ingredient.recipes_ingredients_usages.find_by_recipe_id(@recipe.id).quantity %>
     <span><%= ingredient.name %></li>
     <% end %>
 </ul>
